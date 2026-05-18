@@ -60,6 +60,13 @@
             font-size: 1rem;
             color: #94a3b8;
         }
+
+        .message {
+            margin-top: 25px;
+            font-size: 1.3rem;
+            color: #67e8f9;
+            min-height: 32px;
+        }
     </style>
 </head>
 
@@ -70,12 +77,21 @@
 
         <p>The new builder stack is alive.</p>
 
-        <button>Click Me</button>
+        <button onclick="showMessage()">Click Me</button>
+
+        <div id="message" class="message"></div>
 
         <p class="version">
-            Version 2 - Rocky is learning AI-assisted development.
+            Version 3 - The button now talks back.
         </p>
     </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "Nice work, Rocky. The button is alive.";
+        }
+    </script>
 
 </body>
 </html>
